@@ -1,0 +1,81 @@
+:root {
+    --white: #ffffff;
+    --white-600: #e8e8e8;
+    --nav-color: #000000;
+    --nav-signup-color: #6987cd;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--white-600);
+
+    & a {
+        padding: 0 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    & .brand {
+        & img {
+            width: 135px;
+        }
+    }
+
+    & .links {
+        position: relative;
+        display: flex;
+
+        & a {
+            display: flex;
+            align-items: center;
+
+            & img {
+                width: 12px;
+            }
+        }
+
+        & .dropdown {
+            background-color: var(--white);
+            position: absolute;
+            margin: 10px 0;
+            padding: 10px;
+
+            width: 182px;
+            border: 1px solid var(--white-600);
+
+            box-shadow: rgba(0, 0, 0, 0.199) 0px 5px 15px;
+
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+            & a {
+                padding: 5px 0;
+            }
+
+            & .subdropdown {
+                margin-top: 0;
+                top: 0;
+                left: 70%;
+            }
+        }
+    }
+
+    & .login-register {
+        font-weight: 600;
+
+        & #signin {
+            border-right: 1px solid var(--white-600);
+        }
+
+        & #signup {
+            color: var(--nav-signup-color);
+        }
+    }
+}
