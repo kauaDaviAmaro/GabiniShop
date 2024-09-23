@@ -11,9 +11,11 @@ footer {
     }
 
     & .footerWrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
         position: relative;
-        min-height: 200px;
-
+        min-height: 240px;
 
         & .others {
             padding-top: 30px;
@@ -52,6 +54,7 @@ footer {
         z-index: 0;
         position: absolute;
         top: 0px;
+        width: 90%;
 
         & img {
             width: 100%;
@@ -87,7 +90,7 @@ footer {
                 position: absolute;
                 right: 16px;
                 top: 50%;
-                transform: translateY(-50%);
+                transform: translateY(50%);
             }
         }
     }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Depoimentos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+
+        .testimonial-carousel {
+            position: relative;
+            width: 80%;
+            max-width: 900px;
+            overflow: hidden;
+        }
+
+        .testimonial-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial {
+            min-width: 33.33%;
+            /* Mostrar três depoimentos por vez */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: white;
+            margin: 0 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .testimonial h3 {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #555;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="testimonial-carousel">
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Este serviço foi incrível! Altamente recomendado."</p>
+                <h3>- Cliente 1</h3>
+            </div>
+            <div class="testimonial">
+                <p>"A experiência foi excelente. Muito satisfeito com o atendimento."</p>
+                <h3>- Cliente 2</h3>
+            </div>
+            <div class="testimonial">
+                <p>"O suporte foi muito atencioso e rápido. Recomendo!"</p>
+                <h3>- Cliente 3</h3>
+            </div>
+            <div class="testimonial">
+                <p>"Produto de ótima qualidade e entrega rápida."</p>
+                <h3>- Cliente 4</h3>
+            </div>
+            <div class="testimonial">
+                <p>"Estou muito satisfeito com os resultados obtidos."</p>
+                <h3>- Cliente 5</h3>
+            </div>
+            <div class="testimonial">
+                <p>"Excelente custo-benefício. Super recomendo!"</p>
+                <h3>- Cliente 6</h3>
+            </div>
+        </div>
+
+    </div>
+    <button class="prev" onclick="prevTestimonial()">left</button>
+    <button class="next" onclick="nextTestimonial()">right</button>
+
+    <script>
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        const totalTestimonials = testimonials.length;
+        const testimonialsPerPage = 3;
+
+        function showTestimonials() {
+            const testimonialContainer = document.querySelector('.testimonial-container');
+            const offset = currentIndex * 100 / testimonialsPerPage;
+            testimonialContainer.style.transform = `translateX(-${offset}%)`;
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % Math.ceil(totalTestimonials / testimonialsPerPage);
+            showTestimonials();
+        }
+
+        function prevTestimonial() {
+            currentIndex = (currentIndex - 1 + Math.ceil(totalTestimonials / testimonialsPerPage)) % Math.ceil(totalTestimonials / testimonialsPerPage);
+            showTestimonials();
+        }
+
+        showTestimonials();
+
+    </script>
+</body>
+
+</html>

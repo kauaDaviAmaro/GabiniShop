@@ -5,136 +5,15 @@
 @import 'newProducts.css';
 @import 'promotion.css';
 @import 'footer.css';
+@import 'productsHighlighted.css';
+@import 'testimonials.css';
 
 main > * {
     margin: 80px 0;
 }
 
-.productsHighlighted {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 80px;
-    /* padding: 50px 0; */
-
-    &>* {
-        flex: 1;
+@media screen and (max-width: 768px) {
+    main > * {
+        margin: 0;
     }
-
-    & .title {
-        font-size: 48px;
-        line-height: 56px;
-        text-align: left;
-        font-weight: 600;
-        line-break: anywhere;
-    }
-
-    & .review {
-        display: flex;
-        align-items: center;
-        margin: 32px 0;
-
-        & .totalRating {
-            margin-left: 10px;
-            color: #1177FF;
-        }
-    }
-
-    & .price {
-        display: flex;
-
-        & .old {
-            text-decoration: line-through;
-        }
-
-        & .priceInfo {
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-
-            & .discount {
-                /* background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/1px 1px no-repeat,
-                    radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/1px 1px no-repeat,
-                    radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/1px 1px no-repeat,
-                    radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/1px 1px no-repeat,
-                    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
-                    linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
-                    linear-gradient(90deg, #FFBD72 0%, rgba(205, 67, 255, 0.501) 100%);
-                border-radius: 40px;
-                padding: 6px; */
-            }
-        }
-    }
-
-    & .colorOptions {
-        display: flex;
-        margin-bottom: 32px;
-    }
-
-    & .imagem {}
 }
-
-.testimonials {
-    text-align: center;
-    background-color: #F3F5F9;
-    padding: 91px;
-
-    & .subtitle1 {
-        margin-bottom: 16px;
-    }
-
-    & .body2 {
-        margin-bottom: 50px;
-        color: #767A85;
-    }
-
-    & .pagination {
-        & img {
-            width: 24px;
-            background-color: var(--black-500);
-            border-radius: 50%;
-        }
-    }
-
-    & .testimonialsWrapper {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        justify-content: space-between;
-
-        & .testimonialsCard {
-            background-color: var(--white-50);
-            flex: 1;
-            width: 100%;
-            border-radius: 30px;
-            padding: 40px 30px;
-
-            & .review {
-                margin-bottom: 24px;
-
-                & .stars {
-                    margin-bottom: 24px
-                }
-            }
-
-            & img {
-                margin-bottom: 16px;
-                border-radius: 50%;
-                object-fit: cover;
-                width: 56px;
-                height: 56px;
-            }
-
-            & .name {
-                color: #0A102F;
-                margin-bottom: 4px;
-            }
-
-            & .job {
-                color: #878787;
-            }
-        }
-    }
-
-}
-

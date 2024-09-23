@@ -1,0 +1,165 @@
+.productsHighlighted {
+    padding: 90px 0;
+    background-color: #f3f5f9;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    /* padding: 50px 0; */
+
+    & .container {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+
+        & > *:first-child {
+            flex: 1.6;
+        }
+
+        & > *:last-child {
+            max-width: 600px;
+        }
+    }
+
+
+    & .title {
+        font-size: 48px;
+        line-height: 56px;
+        text-align: left;
+        font-weight: 600;
+        line-break: anywhere;
+    }
+
+    & .review {
+        display: flex;
+        align-items: center;
+        margin: 32px 0;
+
+        & .totalRating {
+            margin-left: 10px;
+            color: #1177FF;
+        }
+    }
+
+    & .price {
+        margin: 56px 0 32px 0;
+        display: flex;
+
+        & .old {
+            text-decoration: line-through;
+        }
+
+        & .priceInfo {
+            margin-left: 10px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+
+            & .discount {
+                margin: 10px 0;
+                background: radial-gradient(circle at 100% 100%, #f4f6f9 0, #f4f6f9 8px, transparent 8px) 0% 0%/9px 9px no-repeat,
+                    radial-gradient(circle at 0 100%, #f4f6f9 0, #f4f6f9 8px, transparent 8px) 100% 0%/9px 9px no-repeat,
+                    radial-gradient(circle at 100% 0, #f4f6f9 0, #f4f6f9 8px, transparent 8px) 0% 100%/9px 9px no-repeat,
+                    radial-gradient(circle at 0 0, #f4f6f9 0, #f4f6f9 8px, transparent 8px) 100% 100%/9px 9px no-repeat,
+                    linear-gradient(#f4f6f9, #f4f6f9) 50% 50%/calc(100% - 2px) calc(100% - 18px) no-repeat,
+                    linear-gradient(#f4f6f9, #f4f6f9) 50% 50%/calc(100% - 18px) calc(100% - 2px) no-repeat,
+                    linear-gradient(90deg, #cd43ff 0%, #fd65a6 26%, #fc9651 77%, #ffbd72 100%);
+                border-radius: 11px;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    & .colorOptions {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        color: #1F2026;
+
+        .colors {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        & .color-circle {
+            cursor: pointer;
+            border: 2px solid #FFFFFF;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        & .redBlue {
+            background: linear-gradient(135deg, #6ACEEC 48.12%, #F4A1C2 49.37%);
+        }
+
+        & .bluePink {
+            background: linear-gradient(135deg, #B53228 48.12%, #3B4A99 49.37%);
+        }
+    }
+
+    & .imagem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .caroselContainer {
+        overflow: hidden;
+        transition: transform 0.5s ease;
+    }
+
+    & .carousel {
+        position: relative;
+        width: 100%;
+        max-height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: fit-content;
+
+
+        transform: translateY(50%);
+
+        & .carousel-item {
+            position: relative;
+
+            & .rect {
+                border-radius: 40px;
+                z-index: -2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60%;
+                height: 80%;
+            }
+
+            & .noise {
+                border-radius: 40px;
+                background-image: url("/imgs/Texture.png");
+                background-size: 100%;
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            & img {
+                height: 646px;
+            }
+        }
+    }
+
+
+}
